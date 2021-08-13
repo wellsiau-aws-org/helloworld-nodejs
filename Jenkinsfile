@@ -33,7 +33,7 @@ spec:
     }
   stages {
     stage('Test') {
-      agent { label 'nodejs-app' }
+      agent { label 'spot-pod' }
       steps {
         checkout scm
         container('nodejs') {
@@ -47,6 +47,7 @@ spec:
          beforeAgent true
          branch 'master'
       }
+      agent { label 'spot-pod' }
       steps {
          echo "TODO - build and push image"
       }
