@@ -38,7 +38,6 @@ spec:
         checkout scm
         container('nodejs') {
           echo 'Hello World!'   
-          sh 'node --version'
         }
       }
     }
