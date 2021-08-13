@@ -33,7 +33,6 @@ spec:
     }
   stages {
     stage('Test') {
-      agent { label 'spot-pod' }
       steps {
         checkout scm
         container('nodejs') {
